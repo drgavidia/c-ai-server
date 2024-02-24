@@ -4,7 +4,7 @@ require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 app.use(express.json());
-app.use(cors({origin: "*", 
+app.use(cors({origin: "https://cicada-ai.web.app", 
 methods: [
   "GET", "POST", "PUT", "DELETE"
 ]
