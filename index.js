@@ -4,7 +4,11 @@ require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: 'https://localhost:5173', 
+methods: [
+  "GET", "POST", "PUT", "DELETE"
+]
+}));
 const port = process.env.PORT || 5000;
 
 const API_KEY = `${process.env.GPT_API_KEY}`;
